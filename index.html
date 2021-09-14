@@ -41,39 +41,33 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: white;}
-#FAQs {background-color: white;}
-#Contact {background-color: white;}
-#About {background-color: white;}
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
 </style>
     <body>
+        
 <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('FAQs', this, 'green')">FAQs</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">News</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="FAQs" class="tabcontent">
-  <h3>Frequently Asked Questions</h3>
-  <p>How do I create a deck?</p> 
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
 </div>
 
 <div id="Contact" class="tabcontent">
   <h3>Contact</h3>
-  <p>Got a question or sugestion? Contact us here.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
 <script>
-function openPage(pageName, elmnt, color) {
+function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -84,7 +78,7 @@ function openPage(pageName, elmnt, color) {
     tablinks[i].style.backgroundColor = "";
   }
   document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = #FE950F;
+  elmnt.style.backgroundColor = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
