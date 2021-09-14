@@ -41,10 +41,10 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
 </style>
     <body>
 <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
@@ -57,14 +57,14 @@ body, html {
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
+<div id="FAQs" class="tabcontent">
+  <h3>Frequently Asked Questions</h3>
+  <p>How do I create a deck?</p> 
 </div>
 
 <div id="Contact" class="tabcontent">
   <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
+  <p>Got a question or sugestion? Contact us here.</p>
 </div>
 
 <div id="About" class="tabcontent">
@@ -73,7 +73,7 @@ body, html {
 </div>
 
 <script>
-function openPage(pageName,elmnt,color) {
+function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
