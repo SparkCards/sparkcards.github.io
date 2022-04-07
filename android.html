@@ -6,10 +6,10 @@
     <body>
         <h2>Test Page</h2>
         <button onclick="window.AndroidApp.receiveString('test return value');">Click</button>
+        <label id="testlabel">test</label>
         <script>
-            function doStringToMyAndroid(stringFromAndroid){
-                var myJsString = "Test Return";
-                return myJsString;
+            function setLabel(stringFromAndroid){
+                  document.getElementById('testlabel').innerHTML = stringFromAndroid;
             }
         </script>
     </body>
