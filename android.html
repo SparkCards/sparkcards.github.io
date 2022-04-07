@@ -22,11 +22,9 @@
             <span class="slider round"></span>
         </label>
         <script>
-            var _selector = document.querySelector('input[name=myCheckbox]');
-            _selector.addEventListener('change', function(event) {
-              Received =  document.getElementById("value").value;
-              JSBridge.showMessageInNative(valueReceived);
-            });
+            function test(name) {
+                return ('test return value - ' + name)
+            }
         </script>
     </body>
 </html>
