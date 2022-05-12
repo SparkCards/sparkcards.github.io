@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <title>SparkCards Support</title>
-        <link rel="icon" href="./logo-circle.png" type="image/png">
-        <link rel="apple-touch-icon" href="./logo-circle.png">
+        <link rel="icon" href="./images/logo-circle.png" type="image/png">
+        <link rel="apple-touch-icon" href="./images/logo-circle.png">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -187,7 +187,11 @@
                 oHeader.style.borderBottomLeftRadius = '0px';
                 oHeader.style.borderBottomRightRadius = '0px';
                 
-                $(oSection).slideDown ('fast');
+                $(oSection).slideDown ('fast', function(){
+                    $([document.documentElement, document.body]).animate({
+                            scrollTop: $(oHeader).offset().top - 20
+                        }, 350);
+                });
                 
             }
             else {
@@ -197,6 +201,8 @@
                     oHeader.style.borderBottomLeftRadius = '12px';
                     oHeader.style.borderBottomRightRadius = '12px';
                 });
+                
+                
             }
         }
     </script>
