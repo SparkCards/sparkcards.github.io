@@ -34,23 +34,24 @@
             transition: 0.4s;
         }
         hr {
-          border: 1px solid #FE950F;
+          border: 1px solid #c4c4c4;
           border-radius: 1px;
-          padding-left:20%
-          padding-right:20%
+          margin-left:10%;
+          margin-right:10%;
         }
         .header {
-            color:#FFF;
-            padding-left:20px;
+            color:#FE950F;
+            padding-left:10px;
             padding-right:20px;
             padding-top:8px;
             padding-bottom:8px;
             
-            background-color:#FE950F;
-            border: none;
+            /*background-color:#FE950F;*/
+            border: 1.5px solid #FE950F;
             
             text-align:left;
             font-size:18px;
+            
             border-radius:12px;
             
             cursor:pointer;
@@ -68,9 +69,9 @@
             padding-top:10px;
             padding-bottom:10px;
             
-            color:#FE950F;
+            color:#6b6b6b;
             background-color:#FFF;
-            border: 2px solid #FE950F;
+            border: 1.5px solid #FE950F;
             border-radius:12px;
             
             border-top:none;
@@ -95,7 +96,7 @@
             var oSection = document.getElementById('o' + sSection + 'Content');
             var oIndicator = document.getElementById('o' + sSection + 'Ind');
             if (oSection.style.display != 'block') {
-                oIndicator.innerHTML = '-';
+                oIndicator.innerHTML = '<img src="./images/help-icons/circle-minus.png" style="width:25px;margin-bottom:-6px" />';
                 // oSection.style.display = 'block';
                 oHeader.style.borderBottomLeftRadius = '0px';
                 oHeader.style.borderBottomRightRadius = '0px';
@@ -104,7 +105,7 @@
                 
             }
             else {
-                oIndicator.innerHTML = '+';
+                oIndicator.innerHTML = '<img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" />';
                 
                 $(oSection).slideUp ('fast', function () {
                     oHeader.style.borderBottomLeftRadius = '12px';
@@ -113,25 +114,29 @@
             }
         }
     </script>
-    
-    <body>
-        <h2>Welcome to SparkCards Support</h2>
+    <body style="text-align:center;">
         <br>
-        <h3>SparkCards Support Request<hr></h3><p>Experiencing an issue or have a question about our products or services? Use the link below or email us at sparkcardshelp@gmail.com to get in touch with our support team.</p>
-        <br>
-    
+        <h1>SparkCards Support</h1>
         
-        <a href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request" ><button class="button">Email SparkCards Support &rsaquo;</button></a>
-        <br><br><br><br>
-        <h3>Frequently Asked Questions<hr></h3>
+        <br><br><br>
         
         
-        <br>
         
-        <div style="margin-left:1%; margin-right:1%;">
+        <h3>SparkCards Support Request<hr style="margin-top:4px;" ></h3>
+        <p style="margin-left:20%; margin-right:20%">Experiencing an issue or have a question about our products or services? <br> Please feel free to <a href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request" style="color:#FE950F">contact us</a> to get in touch with our support team.</p>
+        
+        <a href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request" ><button class="button">Contact SparkCards Support &rsaquo;</button></a>
+        <br><br><br><br><br>
+        
+        
+        
+        
+        <h3>Frequently Asked Questions<hr style="margin-top:4px;" ></h3>
+        
+        <div style="margin-left:15%; margin-right:15%; text-align:left;">
             
             <div class="header" onClick="toggleSection ('CreateDeck')" id="oCreateDeckHeader">
-                <span class="accordianIndicator" id="oCreateDeckInd">+</span> Creating a Deck
+                <span class="accordianIndicator" id="oCreateDeckInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Deck
             </div>
             <div class="content" id="oCreateDeckContent">
                 
@@ -140,20 +145,21 @@
                     <li>Choose the "Create" option.</li>
                     <li>You can enter the deck title in the space provided. Decks will save automatially.</li>
                     <li>Use the folder button to manage folders. For more information on folders, see the section "Managing Folders."</li>
-                    <li>To add a card, tap the <img src="./images/help-icons/card-plus.png" style="width:25px; margin-bottom:-7px" /> button. For more information on creating cards, see the section "Creating a Card."</li>
+                    <li>To add a card, tap the <img src="./images/help-icons/circle-plus.png" style="width:25px; margin-bottom:-8px" /> button. For more information on creating cards, see the section "Creating a Card."</li>
                     <li>To delete the deck, tap the trash button at the top left of the screen.</li>
                 </ol>
                 
             </div>
             
+            
             <br>
             <div class="header" onClick="toggleSection ('CreateCard')" id="oCreateCardHeader">
-                <span class="accordianIndicator" id="oCreateCardInd">+</span> Creating a Card
+                <span class="accordianIndicator" id="oCreateCardInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Card
             </div>
             <div class="content" id="oCreateCardContent">
                 <ol>
                     <li>Navigate to to the deck you want to add cards to. If need to create a deck, see the section "Creating a Deck."</li>
-                    <li>Tap the <img src="./images/help-icons/card-plus.png" style="width:25px; margin-bottom:-7px" /> button.</li>
+                    <li>Tap the <img src="./images/help-icons/circle-plus.png" style="width:25px; margin-bottom:-8px" /> button.</li>
                     <li>You can choose text or image using the controls for the front and back. In the image tab, you can choose to upload an image or create a drawing.</li>
                     <li>Enter either text or an image/drawing for the front and back. You can choose a card theme using the controls at the bottom of the page.</li>
                     <li>Tap the "Create" button at the top right of the screen to create the card. You can tap the card in the list to edit it.</li>
@@ -162,7 +168,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Export')" id="oExportHeader">
-                <span class="accordianIndicator" id="oExportInd">+</span> Exporting a Deck
+                <span class="accordianIndicator" id="oExportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Exporting a Deck
             </div>
             <div class="content" id="oExportContent">
                 <ol>
@@ -179,7 +185,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Import')" id="oImportHeader">
-                <span class="accordianIndicator" id="oImportInd">+</span> Importing a Deck
+                <span class="accordianIndicator" id="oImportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Importing a Deck
             </div>
             <div class="content" id="oImportContent">
                 <ol>
@@ -197,7 +203,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Folder')" id="oFolderHeader">
-                <span class="accordianIndicator" id="oFolderInd">+</span> Managing Folders
+                <span class="accordianIndicator" id="oFolderInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Managing Folders
             </div>
             <div class="content" id="oFolderContent">
                 <strong>Creating a Folder</strong>
