@@ -11,9 +11,89 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <style>
+        @media screen and (min-width: 1000px) {
+            .logoImage {
+                width:10%
+            }
+            .questions {
+                margin-left:15%;
+                margin-right:15%;
+                text-align:left;
+            }
+            hr {
+              border: 1px solid #c4c4c4;
+              border-radius: 1px;
+              margin-left:10%;
+              margin-right:10%;
+            }
+            .title-text {
+                font-size:35pt;
+                font-family: 'Arial Rounded MT Bold'
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .logoImage {
+                width: 12%;
+            }
+            .questions {
+                margin-left:10%;
+                margin-right:10%;
+                text-align:left;
+            }
+            hr {
+              border: 1px solid #c4c4c4;
+              border-radius: 1px;
+              margin-left:5%;
+              margin-right:5%;
+            }
+            .title-text {
+                font-size:33pt;
+                font-family: 'Arial Rounded MT Bold'
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .logoImage {
+                width: 14%;
+            }
+            .questions {
+                margin-left:5%;
+                margin-right:5%;
+                text-align:left;
+            }
+            hr {
+              border: 1px solid #c4c4c4;
+              border-radius: 1px;
+              margin-left:3%;
+              margin-right:3%;
+            }
+            .title-text {
+                font-size:31pt;
+                font-family: 'Arial Rounded MT Bold'
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .logoImage {
+                width: 16%;
+            }
+            .questions {
+                margin-left:2%;
+                margin-right:2%;
+                text-align:left;
+            }
+            hr {
+              border: 1px solid #c4c4c4;
+              border-radius: 1px;
+              margin-left:1%;
+              margin-right:1%;
+            }
+            .title-text {
+                font-size:29pt;
+                font-family: 'Arial Rounded MT Bold'
+            }
+        }
+        
         body {
             font-family: 'Open Sans', sans-serif;
-            padding-left:1%
         }
         .button {
             background-color: #FFF;
@@ -32,12 +112,6 @@
             background-color: #FE950F;
             color: white;
             transition: 0.4s;
-        }
-        hr {
-          border: 1px solid #c4c4c4;
-          border-radius: 1px;
-          margin-left:10%;
-          margin-right:10%;
         }
         .header {
             color:#FE950F;
@@ -84,6 +158,17 @@
         .accordianIndicator {
             font-family:courier;
         }
+        .largeLink {
+            color: #515151;
+            font-size: 11pt;
+            text-decoration: none;
+        }
+        .link:hover {
+            color: #0c0c0c;
+        }
+        .largeLink:hover {
+            color: #0c0c0c;
+        }
         
         
     </style>
@@ -115,28 +200,33 @@
         }
     </script>
     <body style="text-align:center;">
+        
         <br>
-        <h1>SparkCards Support</h1>
+        <a href="https://sparkcards.github.io/" style="color:white">
+            <img src="./images/logo.png" class="logoImage" align="center" alt="SparkCards">
+        </a>
+
+        <h1 class="title-text" style="margin-top:10px" >SparkCards Support</h1>
         
-        <br><br><br>
+        
+        <br><br><br><br>
         
         
         
-        <h3>SparkCards Support Request<hr style="margin-top:4px;" ></h3>
+        <h2>SparkCards Support Request<hr style="margin-top:5px;" ></h2>
         <p style="margin-left:20%; margin-right:20%">Experiencing an issue or have a question about our products or services? <br> Please feel free to <a href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request" style="color:#FE950F">contact us</a> to get in touch with our support team.</p>
         
         <a href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request" ><button class="button">Contact SparkCards Support &rsaquo;</button></a>
         <br><br><br><br><br>
         
         
+        <h2>Frequently Asked Questions<hr style="margin-top:5px;" ></h2>
         
         
-        <h3>Frequently Asked Questions<hr style="margin-top:4px;" ></h3>
-        
-        <div style="margin-left:15%; margin-right:15%; text-align:left;">
+        <div style="text-align:left;" class="questions" >
             
             <div class="header" onClick="toggleSection ('CreateDeck')" id="oCreateDeckHeader">
-                <span class="accordianIndicator" id="oCreateDeckInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Deck
+                <span id="oCreateDeckInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Deck
             </div>
             <div class="content" id="oCreateDeckContent">
                 
@@ -154,7 +244,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('CreateCard')" id="oCreateCardHeader">
-                <span class="accordianIndicator" id="oCreateCardInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Card
+                <span id="oCreateCardInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Creating a Card
             </div>
             <div class="content" id="oCreateCardContent">
                 <ol>
@@ -168,7 +258,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Export')" id="oExportHeader">
-                <span class="accordianIndicator" id="oExportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Exporting a Deck
+                <span id="oExportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Exporting a Deck
             </div>
             <div class="content" id="oExportContent">
                 <ol>
@@ -185,7 +275,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Import')" id="oImportHeader">
-                <span class="accordianIndicator" id="oImportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Importing a Deck
+                <span id="oImportInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Importing a Deck
             </div>
             <div class="content" id="oImportContent">
                 <ol>
@@ -203,7 +293,7 @@
             
             <br>
             <div class="header" onClick="toggleSection ('Folder')" id="oFolderHeader">
-                <span class="accordianIndicator" id="oFolderInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Managing Folders
+                <span id="oFolderInd"><img src="./images/help-icons/circle-plus.png" style="width:25px;margin-bottom:-6px" /></span> Managing Folders
             </div>
             <div class="content" id="oFolderContent">
                 <strong>Creating a Folder</strong>
@@ -236,10 +326,22 @@
         </div>
         
         
+        <br><br>
+        <br><br>
         
-        <br>
-        <br>
         
-        <br><br><br><br><br><br><br><br>
+        <div style="background-color:#f4f4f4; margin-bottom:-10px; margin-left:0px; margin-right:0px;">
+            <hr style=" margin-left:0px; margin-right:0px; border: 1px solid #cecece;">
+            <br>
+            <a class="largeLink" href="./support.html">Support</a>
+            <br><br>
+            <a class="largeLink" href="mailto:sparkcardshelp@gmail.com?subject=SparkCards Support Request">Contact</a>
+            <br><br>
+            <a class="largeLink" href="./privacy-policy.html">Privacy Policy</a>
+            <br>
+            <br>
+        </div>
+        
+        
     </body>
 </html>
