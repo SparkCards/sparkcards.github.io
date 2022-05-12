@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <h2>Test Page</h2>
+        <button onclick="window.AndroidApp.receiveString('test return value');">Click</button>
+        <label id="testlabel">test</label>
+        <script>
+            function setLabel(stringFromAndroid){
+                  document.getElementById('testlabel').innerHTML = stringFromAndroid;
+            }
+        </script>
+    </body>
+</html>
